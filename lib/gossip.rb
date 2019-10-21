@@ -35,9 +35,15 @@ class Gossip
     return all_gossips #on retourne un array rempli d'objets Gossip
   end
 
+  # Fonction qui va récupérer le gossip correspondant à l'id donné en argument
   def find(id)
-
-
+  	return Gossip.all[id]
+  end
+  
+  # Fonction qui va permettre d'éditer un potin déjà existant
+  def update
+    # récupérer les donées du nouveau formulaire (fichier edit.erb)
+    # les mettre à la place du potin voulu dans le fichier .csv
   end
 end
 

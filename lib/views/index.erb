@@ -5,9 +5,11 @@
   <body>
   	<h1>Mon super site de gossip, depuis le dossier views !</h1>
   	<a href = "/gossips/new/">Créer un nouveau potin</a>
-  	<% gossips.each do |gossip| %>
+
+  	<% gossips.each_with_index do |gossip, i| %>
         <p>
         	<!-- Les lignes suivantes vont permettre d'afficher les chaînes de caractères Ruby qui sont entre les deux balises avec les symboles % -->
+        	<a href= "/gossips/<%= i+1 %>">Potin n°<%= i + 1 %></a><br/>
           <%= gossip.author %><br/>
           <%= gossip.content%>
         </p>

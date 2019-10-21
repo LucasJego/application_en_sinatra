@@ -56,11 +56,21 @@ class ApplicationController < Sinatra::Base
   	# ET
   	# la méthode locals va permettre d'envoyer au fichier index.erb
   	# des variables que l'on utilisera. Ici il s'agit de l'array
-  	# obtenu en faisant Gossip.all.
+  	# obtenu en faisant Gossip.all que l'on met dans la variable Ruby
+  	# gossips.
   	erb :index, locals: {gossips: Gossip.all}
   end
 
-  get'/show/:id' do
-  	erb :show # Pas besoin de préciser le id
+  get '/gossips/:id' do
+  	#erb :show # Pas besoin de préciser le id
+  	erb :show, locals: {gossips: Gossip.all.find(params['id'].to_i)}
+  end
+
+  get '/gossips/:id/edit' do
+    erb :edit
+  end
+
+  post '/gossips/:id/edit' do
+    # appel à la fonction update de la classe Gossip
   end
 end

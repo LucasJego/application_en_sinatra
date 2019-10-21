@@ -1,0 +1,17 @@
+<html>
+  <head>
+  	<title>Editer un potin</title>
+  </head>
+  <body>
+  	<h1>Editer un potin !</h1>
+  	<p>Balance ton potin via le formulaire ci-dessous</p>
+  	<form action='/gossips/new/' method='POST'>
+  		<!-- Le champ action définit l'URL qui va recevoir le contenu du formulaire et le champ method définit le type de requête. Ici, le contenu du formulaire sera envoyé vers l'URL /gossips/new avec une requête POST. -->
+  		Saisis ici ton nom : <input type='text' name='gossip_author'/><br/>
+  		<!-- Cette ligne permet de rajouter un champ de saisie de texte à remplir par l'utilisateur. L'option name définit le nom que portera le contenu saisi.-->
+  		Balance ton potin : <input type='text' name='gossip_content'/><br/>
+  		<input type='submit'/>
+  		<!-- Bouton submit. En cliquant dessus, l'utilisateur va déclencher l'envoi de la requête POST avec toutes les informations des champs du formulaire.-->
+  	</form>
+  </body>
+ </html>
