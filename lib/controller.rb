@@ -72,5 +72,6 @@ class ApplicationController < Sinatra::Base
 
   post '/gossips/:id/edit' do
     # appel à la fonction update de la classe Gossip
+    Gossip.update
   end
 end

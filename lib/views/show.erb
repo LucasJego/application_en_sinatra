@@ -7,7 +7,7 @@
   	<p>Voici la page du potin n°<%=params['id'] %></p>
     <p> Son auteur : <%= Gossip.all[params['id'].to_i].author %> </p>
     <p> Le contenu du potin : <%= Gossip.all[params['id'].to_i].content %> </p><br/>
-    <p>Lien pour revenir à la page des potins</p>
+    <p><a href= '/'>Lien pour revenir à la page des potins</a></p>
       
   </body>
 </html>
